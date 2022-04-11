@@ -29,18 +29,23 @@
     </style>
 </head>
 <body>
-    <input type="button" value="night" 
-        onclick="
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
-        "
-    >
-    <input type="button" value="day" 
-        onclick="
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
-        "
-    >
+    <script>
+        console.log(this);
+    </script>
+        <input type="button" onclick="console.log(this);" value="1">
+        <input type="button" onclick="console.log(this);" value="2">
+        <input type="button" value="night"
+            onclick="
+                if(this.value === 'night'){
+                    document.querySelector('body').style.backgroundColor = 'black';
+                    document.querySelector('body').style.color = 'white';
+                    this.value = 'day';
+                } else {
+                    document.querySelector('body').style.backgroundColor = 'white';
+                    document.querySelector('body').style.color = 'black';
+                    this.value = 'night';
+                }"
+        > 
     <h1><a href="index.html">web</a></h1>
     <div id="container">
         <ol>
