@@ -1,36 +1,52 @@
-def convertBinary(n) :
-    '''
-    10진수 n을 2진수로 변환하여 반환합니다.
+import sys
+sys.setrecursionlimit(100000)
 
-    *주의* : 변환된 2진수는 문자열이어야 합니다.
-
-    예를 들어, 19가 입력될 경우 문자열 "10011"이 반환되어야 합니다.
+def strContain(A, B) :
     '''
-    save = ""
-    if 
-        if  n < 1 :
-            return '0'
-        elif n == 1 :
-            return '1'
-        elif :
-            if n%2 == 0:
-                convertBinary(n/2) + '0'
-            else :
-                convertBinary(n/2) + '1'
-            
-        
+    문자열 A의 알파벳이 문자열 B에 모두 포함되어 있으면 "Yes", 아니면 "No"를 반환합니다.
+    '''
+    if A == "":
+        return "Yes"
+    for i in range(0, len(B)):
+        if A[0] == len(B):
+            strContain(A[1:], B) 
+    return "No"
+
+'''    for i in range(0, len(A)):
+        flag = 0
+        for j in range(0, len(B)):
+            if A[i] == B[j]:
+                flag = 1
+                break
+        if flag == 0:
+            return "No"        
+    return "Yes"
+'''
+def main():
+
+
+def GCD(x, y) :
+    '''
+    x, y의 최대공약수를 반환하는 함수
+    '''
+    div = 1
+    for i in range(0, x)
     
 
+    return 1
 
 def main():
     '''
     이 부분은 수정하지 마세요.
     '''
 
-    x = input()
-    print(checkParen(x))
+    data = input()
+
+    x = int(data.split()[0])
+    y = int(data.split()[1])
+
+    print(GCD(x, y))
 
 if __name__ == "__main__":
     main()
-
-
+   
